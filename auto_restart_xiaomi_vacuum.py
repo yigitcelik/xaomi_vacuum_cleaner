@@ -18,7 +18,7 @@ if connector.login() :
     for server in servers:
         try :
             devices = connector.get_devices(server)
-            if len(devices['result']['list']):
+            if len(devices['result']['list'])>0:
                 break
         except:
             pass
