@@ -26,7 +26,7 @@ To use this script, you'll need the following:
    ```bash
    python auto_restart_xiaomi_vacuum.py
 
-## virtual env
+## virtual env & dockerize
 ```bash
 #Create a new virtual environment
 python3 -m venv venv
@@ -34,3 +34,9 @@ python3 -m venv venv
 . venv/bin/activate
 #install
 pip install -r requirements.txt
+
+#dockerize
+docker build . -t vacuum_cleaner_starter
+docker login --username yigitcelik --password token ghcr.io
+docker build . -t ghcr.io/yigitcelik/vacuum_cleaner_starter:latest
+docker push ghcr.io/yigitcelik/vacuum_cleaner_starter:latest

@@ -1,4 +1,5 @@
 FROM python:3
+COPY .env .env
 ADD requirements.txt /
 RUN pip install -r requirements.txt
 ADD auto_restart_xiaomi_vacuum.py /
