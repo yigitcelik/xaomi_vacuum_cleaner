@@ -25,3 +25,12 @@ To use this script, you'll need the following:
 
    ```bash
    python auto_restart_xiaomi_vacuum.py
+
+## virtual env
+```bash
+#Create a new virtual environment
+python3 -m venv venv
+#activate
+. venv/bin/activate
+#install
+pip install -r requirements.txt

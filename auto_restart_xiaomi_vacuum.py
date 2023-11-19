@@ -2,10 +2,14 @@ from miio.integrations import vacuum
 import time
 import token_extractor
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
-username = 'your_username' #mi account username
+load_dotenv()
 
-password = 'your_password' #mi account password
+username = os.getenv("username") #mi account username
+
+password = os.getenv("password") #mi account password
 
 floor_area = 56  #unless the vacuum cleaner dont sweep this much area at least , the cleaning would not end
 
